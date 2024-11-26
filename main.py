@@ -60,8 +60,6 @@ class Chat_message:
         self.text = text
         self.time = time
 
-context = "use imageStableDiffusion"
-
 @dp.message(CommandStart())
 async def start_command(message: Message):
     await message.answer(f"Привет, {html.bold(message.from_user.full_name)}! Выбрите действие:", reply_markup=mainMenu)
